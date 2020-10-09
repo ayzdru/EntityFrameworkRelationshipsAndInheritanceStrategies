@@ -10,7 +10,8 @@ namespace WebApplication.Entities
         //Bire bir ilişki     
         public StudentAddress StudentAddress { get; set; }
         //Çok çok ilişki
-        public ICollection<CourseStudent> CourseStudents { get; set; }
+        private readonly List<LessonStudent> _lessonStudents = new List<LessonStudent>();
+        public IReadOnlyCollection<LessonStudent> LessonStudents => _lessonStudents.AsReadOnly();
 
     }
 }

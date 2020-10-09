@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebApplication.Data.Configurations
 {
@@ -12,7 +13,7 @@ namespace WebApplication.Data.Configurations
         public override void Configure(EntityTypeBuilder<Student> builder)
         {
             base.Configure(builder);
-            builder.HasOne(q => q.StudentAddress).WithOne(q => q.Student).HasForeignKey<StudentAddress>(q => q.StudentId);
+            builder.Metadata.FindNavigation(nameof(Student.LessonStudents)).SetPropertyAccessMode(PropertyAccessMode.Field);
 
         }
     }

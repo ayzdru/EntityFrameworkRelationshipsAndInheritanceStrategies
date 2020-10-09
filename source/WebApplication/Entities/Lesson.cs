@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace WebApplication.Entities
 {
-    public class Course : BaseEntity
+    public class Lesson : BaseEntity
     {
         public string Name { get; set; }
         public string Description { get; set; }
@@ -14,6 +14,7 @@ namespace WebApplication.Entities
         public Teacher Teacher { get; set; }
 
         //Çok çok ilişki
-        public ICollection<CourseStudent> CourseStudents { get; set; }
+        private readonly List<LessonStudent> _lessonStudents = new List<LessonStudent>();
+        public IReadOnlyCollection<LessonStudent> LessonStudents => _lessonStudents.AsReadOnly();
     }
 }

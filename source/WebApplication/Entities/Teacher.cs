@@ -8,6 +8,7 @@ namespace WebApplication.Entities
     public class Teacher : BasePersonEntity
     {
         //Bire çok ilişki
-        public ICollection<Course> Courses { get; set; }
+        private readonly List<Lesson> _lessons = new List<Lesson>();
+        public IReadOnlyCollection<Lesson> Lessons => _lessons.AsReadOnly();
     }
 }

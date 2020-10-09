@@ -12,7 +12,7 @@ namespace WebApplication.Data.Configurations
         public override void Configure(EntityTypeBuilder<StudentAddress> builder)
         {
             base.Configure(builder);
-          
+            builder.HasOne(q => q.Student).WithOne(q => q.StudentAddress).HasForeignKey<StudentAddress>(q => q.StudentId);
         }
     }
 }
