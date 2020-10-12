@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 
 namespace WebApplication.Entities
 {
-    public class Lesson : BaseEntity
+    public class Classroom : BaseEntity
     {
         public string Name { get; set; }
         public string Description { get; set; }
         //Bire çok ilişki
-        public Teacher TeacherId { get; set; }
+        public Guid TeacherId { get; set; }
         public Teacher Teacher { get; set; }
 
         //Çok çok ilişki
-        private readonly List<LessonStudent> _lessonStudents = new List<LessonStudent>();
-        public IReadOnlyCollection<LessonStudent> LessonStudents => _lessonStudents.AsReadOnly();
+        private readonly List<ClassroomStudent> _classroomStudents = new List<ClassroomStudent>();
+        public IReadOnlyCollection<ClassroomStudent> ClassroomStudents => _classroomStudents.AsReadOnly();
     }
 }

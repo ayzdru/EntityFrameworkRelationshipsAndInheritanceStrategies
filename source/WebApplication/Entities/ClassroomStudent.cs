@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace WebApplication.Entities
 {
-    public class LessonStudent : BaseEntity
+    public class ClassroomStudent : BaseEntity
     {
-        public Guid LessonId { get; set; }
-        public Lesson Lesson { get; set; }
+        public Guid ClassroomId { get; set; }
+        public Classroom Classroom { get; set; }
         public Guid StudentId { get; set; }
         public Student Student { get; set; }
 

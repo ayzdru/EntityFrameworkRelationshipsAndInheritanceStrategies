@@ -16,6 +16,11 @@ namespace WebApplication.Data
 {
     public class ApplicationDbContext : IdentityDbContext<IdentityUser<Guid>, IdentityRole<Guid>, Guid>
     {
+        public DbSet<Classroom> Classrooms { get; set; }
+        public DbSet<ClassroomStudent> ClassroomStudents { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<StudentAddress> StudentAddresses { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
         private Guid? GetUserId(ClaimsPrincipal principal)
         {
             if (principal == null)
@@ -65,6 +70,7 @@ namespace WebApplication.Data
         {
             base.OnModelCreating(builder);
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            
         }
     }
 }

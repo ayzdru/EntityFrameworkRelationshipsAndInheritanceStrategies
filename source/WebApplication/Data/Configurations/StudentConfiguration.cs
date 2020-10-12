@@ -13,7 +13,7 @@ namespace WebApplication.Data.Configurations
         public override void Configure(EntityTypeBuilder<Student> builder)
         {
             base.Configure(builder);
-            builder.Metadata.FindNavigation(nameof(Student.LessonStudents)).SetPropertyAccessMode(PropertyAccessMode.Field);
+            builder.Metadata.FindNavigation(nameof(Student.ClassroomStudents)).SetPropertyAccessMode(PropertyAccessMode.Field);
 
         }
     }

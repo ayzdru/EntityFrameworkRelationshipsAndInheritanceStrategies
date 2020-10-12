@@ -7,16 +7,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Data\Migrations\20201012085319_Initial.cs" />
+    <Compile Remove="Data\Migrations\20201012085319_Initial.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201012103636_Initial.cs" />
+    <Compile Remove="Data\Migrations\20201012103636_Initial.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201012103933_Initial.cs" />
+    <Compile Remove="Data\Migrations\20201012103933_Initial.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201012121530_Initial.cs" />
+    <Compile Remove="Data\Migrations\20201012121530_Initial.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.8" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.8" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.8" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Data\Migrations\" />
   </ItemGroup>
 
 </Project>
