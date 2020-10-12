@@ -10,7 +10,7 @@ namespace WebApplication.Data.Configurations
 {
     public class DebitCardConfiguration : IEntityTypeConfiguration<DebitCard>
     {
-        public override void Configure(EntityTypeBuilder<DebitCard> builder)
+        public void Configure(EntityTypeBuilder<DebitCard> builder)
         {
             builder.HasBaseType<BaseCardEntity>();
 

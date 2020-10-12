@@ -8,12 +8,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace WebApplication.Data.Configurations
 {
-    public class CreditCardConfiguration : IEntityTypeConfiguration<CreditCard>
+    public class OnlineCourseConfiguration : BaseEntityConfiguration<OnlineCourse>
     {
-        public void Configure(EntityTypeBuilder<CreditCard> builder)
+        public override void Configure(EntityTypeBuilder<OnlineCourse> builder)
         {
-            builder.HasBaseType<BaseCardEntity>();
-
+            base.Configure(builder);
+            builder.HasOne(b => b.Course).WithMany(b => b.OnlineCourses).HasForeignKey(b => b.CourseId);
         }
     }
 }

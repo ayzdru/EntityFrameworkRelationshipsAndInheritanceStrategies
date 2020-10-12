@@ -10,7 +10,7 @@ namespace WebApplication.Entities
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public int Number { get; set; }
+        public long Number { get; set; }
         public int ExpiryMonth { get; set; }
         public int ExpiryYear { get; set; }
         public int Cvc { get; set; }

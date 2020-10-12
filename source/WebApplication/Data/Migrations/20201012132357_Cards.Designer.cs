@@ -10,7 +10,7 @@ using WebApplication.Data;
 namespace WebApplication.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201012130340_Cards")]
+    [Migration("20201012132357_Cards")]
     partial class Cards
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -254,8 +254,8 @@ namespace WebApplication.Data.Migrations
                     b.Property<Guid?>("LastUpdatedByUserId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("Number")
-                        .HasColumnType("int");
+                    b.Property<long>("Number")
+                        .HasColumnType("bigint");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()

@@ -21,6 +21,12 @@
     <Compile Remove="Data\Migrations\20201012125011_Cards.Designer.cs" />
     <Compile Remove="Data\Migrations\20201012125647_Cards.cs" />
     <Compile Remove="Data\Migrations\20201012125647_Cards.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201012130340_Cards.cs" />
+    <Compile Remove="Data\Migrations\20201012130340_Cards.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201012135736_Courses.cs" />
+    <Compile Remove="Data\Migrations\20201012135736_Courses.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201012140239_Courses.cs" />
+    <Compile Remove="Data\Migrations\20201012140239_Courses.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -19,7 +19,7 @@ namespace WebApplication.Data.Migrations
                     RowVersion = table.Column<byte[]>(rowVersion: true, nullable: true),
                     FirstName = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
-                    Number = table.Column<int>(nullable: false),
+                    Number = table.Column<long>(nullable: false),
                     ExpiryMonth = table.Column<int>(nullable: false),
                     ExpiryYear = table.Column<int>(nullable: false),
                     Cvc = table.Column<int>(nullable: false),
