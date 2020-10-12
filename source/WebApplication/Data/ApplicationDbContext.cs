@@ -21,6 +21,7 @@ namespace WebApplication.Data
         public DbSet<Student> Students { get; set; }
         public DbSet<StudentAddress> StudentAddresses { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<BaseCardEntity> Cards { get; set; }
         private Guid? GetUserId(ClaimsPrincipal principal)
         {
             if (principal == null)
