@@ -6,12 +6,10 @@ using WebApplication.Interfaces;
 
 namespace WebApplication.Entities
 {
-    public class OfflineCourse : BaseEntity, ICourse
-    {
-        public string Name { get; set; }
-        public string Details { get; set; }
+    public class OnlineCourse : BaseCourse
+    {    
         public Guid CourseId { get; set; }
         public Course Course { get; set; }
-        public string Address { get; set; }
+        public string Url { get; set; }
     }
 }

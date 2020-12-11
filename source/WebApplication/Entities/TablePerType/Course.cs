@@ -7,10 +7,9 @@ using WebApplication.Interfaces;
 
 namespace WebApplication.Entities
 {
-    public class Course : BaseEntity, ICourse
+    public class Course : BaseCourse
     {
-        public string Name { get; set; }
-        public string Details { get; set; }
+       
 
         //Bire çok ilişki
         private readonly List<OnlineCourse> _onlineCourses = new List<OnlineCourse>();
